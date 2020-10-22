@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+	<title>PAVE - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./assets/css/general.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/fontawesome-free-5.11.2/css/all.css"/>
+</head>
+<body>
+		<header id="header-app">
+            <form>
+                <div class="usersearch-container">
+                    <label class="acessibility-context" for="usersearch">Pesquisar usuário/escola: </label>  <!-- Texto escondido para usuários típicos, mas que será pego por um leitor de tela -->
+                    <input id="usersearch" type="text" name="usersearch" placeholder="Pesquisar usuário/escola"/>
+                    <label class="acessibility-context" for="usersearch-button">Submit pesquisa de usuário</label>
+                    <button id="usersearch-button" type="submit">
+                        <i id="usersearch-icon" class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </header>
+        <nav id="options">
+            <ul>
+                <li class="options-item">
+                    <a href="./home.html">
+                        <span class="acessibility-context"> <!-- Texto escondido para usuários típicos, mas que será pego por um leitor de tela -->
+                            Início
+                        </span>
+                        <i class="fas fa-home"></i>
+                    </a>
+                <li class="options-item">
+                    <a href="./messages.html">
+                        <span class="acessibility-context">
+                            Mensagens
+                        </span>
+                        <i class="fas fa-comment-alt"></i>
+                    </a>
+                </li>
+                <li class="options-item">
+                    <a href="./settings.html">
+                        <span class="acessibility-context">
+                            Menu
+                        </span>
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+		<main id="main">
+            <header id="header-pubs">
+                <div>
+                    <img id="mypic" src="https://thispersondoesnotexist.com/image" alt="Sua foto de perfil"/>
+                    <button id="create-post" class="pave-button-dark">Criar nova publicação 😉</button>
+                </div>
+            </header>
+            <section id="section-pubs">
+                <h2 class="acessibility-context">Seu feed de postagens: </h2>
+                <article class="pub simple-post">
+                    <header class="header-pub">
+                        <img class="pub-owner-pic" src="https://picsum.photos/50" alt="Foto de perfil da FATEC Zona Sul"/>
+                        <div class="pub-details">
+                            <h3 class="pub-owner-name"><a href="#">FATEC Zona</a></h3>
+                            <p>
+                                <span class="acessibility-context">Data e hora da publicação: </span><time datetime="2019-11-24 10:10">24/11/2019 10:10</time>
+                            </p>
+                        </div>
+                        <button class="pave-button-dark">•••<span class="acessibility-context">Opções dessa publicação</span></button>
+                    </header>
+                    <section class="content-pub">
+                        <h4 class="acessibility-context">Descrição da imagem: </h4>
+                        <p class="pub-description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est dignissimos consequatur accusamus! Repellendus necessitatibus a, corporis voluptatem ipsam ad doloremque consequatur deserunt repudiandae quibusdam dolor quasi distinctio, commodi vel.
+                        </p>
+                        <div class="pub-images">
+                            <img src="https://picsum.photos/500" alt="Imagem da publicação"/>
+                        </div>
+                    </section>
+                </article>
+                <article class="pub simple-post">
+                        <header class="header-pub">
+                            <img class="pub-owner-pic" src="https://picsum.photos/50" alt="Foto de perfil da FATEC Zona Sul"/>
+                            <div class="pub-details">
+                                <h3 class="pub-owner-name"><a href="#">FATEC Zona</a></h3>
+                                <p>
+                                    <span class="acessibility-context">Data e hora da publicação: </span><time datetime="2019-11-24 10:10">24/11/2019 10:10</time>
+                                </p>
+                            </div>
+                            <button class="pave-button-dark">•••<span class="acessibility-context">Opções dessa publicação</span></button>
+                        </header>
+                        <section class="content-pub">
+                            <h4 class="acessibility-context">Descrição da imagem: </h4>
+                            <p class="pub-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis est dignissimos consequatur accusamus! Repellendus necessitatibus a, corporis voluptatem ipsam ad doloremque consequatur deserunt repudiandae quibusdam dolor quasi distinctio, commodi vel.
+                            </p>
+                            <div class="pub-images">
+                                <img src="https://picsum.photos/500" alt="Imagem da publicação"/>
+                            </div>
+                        </section>
+                    </article>
+            </section>
+		</main>
+    </body>
+</html>

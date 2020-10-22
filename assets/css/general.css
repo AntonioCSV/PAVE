@@ -1,0 +1,308 @@
+/* Begin of Default app configuration*/
+:root {
+	--color-pave-default: #93D050;
+	--color-pave-dark: #53871A;
+	--color-pave-dark-alternative: #799C54;
+	--color-pave-light-1: #C2E899;
+	--color-pave-light-2: #B4E87D;
+	--color-pave-white: #FFF;
+	--color-pave-black: #000;
+}
+img {
+	max-width: 100%;
+}
+* {
+	box-sizing: border-box;
+	padding:0;
+	margin: 0;
+	text-decoration: none;
+}
+html, body {
+	font-family: sans-serif;
+	font-size: 16px;
+	background-color: var(--color-pave-white);
+	width: 330px;
+	height: 550px;
+	overflow: hidden;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color-pave-default);
+	border: 1px solid #EEE;
+}
+.acessibility-context {
+	position: absolute;
+	left: -999em;
+	width: 1em;
+	overflow: hidden;
+}
+.pave-button-dark {
+	position: relative;
+	font-size: 0.9em;
+	border: none;
+	padding: 6px;
+	border-radius: 5px;
+	color: var(--color-pave-white);
+	background-color: var(--color-pave-dark);
+	transition: 0.2s;
+	border: 1px solid transparent;
+}
+.pave-button-dark:hover, .pave-button-dark:focus {
+	cursor: pointer;
+	color: var(--color-pave-dark);
+	background-color: var(--color-pave-light-2);
+	border-color: var(--color-pave-dark);
+}
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 10px;
+}
+/* End of app configuration*/
+
+/* Begin of login and signup pages*/
+#signup-container, #login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 5px;
+	background-color: var(--color-pave-white);
+	padding: 20px;
+	overflow-y: auto;
+	height: 100%;
+}
+#header-login, #header-signup {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px;
+}
+#logo-container {
+	background-color: var(--color-pave-white);
+	border-radius: 5px;
+	width: 100%;
+	text-align: center;
+}
+#logo {
+	height: 50px;
+	padding: 10px;
+}
+#title {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: normal;
+	padding: 5px;
+	border-bottom: 3px solid var(--color-pave-dark-alternative);
+}
+.input-login, .input-signup {
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--color-pave-dark);
+	font-size: 0.9em;
+	padding: 6px;
+	border-radius: 5px;
+}
+.input-login:focus, .input-signup:focus {
+	border-width: 3px;
+}
+.field-container label {
+	color: var(--color-pave-dark);
+	font-size: 0.9em;
+}
+.field-container #submit {
+	margin-top: 25px;
+	font-size: 1.2em;
+}
+/* End of login and signup pages */
+
+/* Begin of app pages configuration */
+#header-app {
+	display: flex;
+    flex-direction: column;
+    padding: 10px 15px;
+}
+.usersearch-container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	border-bottom: 1px solid var(--color-pave-white);
+}
+#usersearch {
+	padding: 5px;
+	width: 100%;
+	background-color: transparent;
+	color: var(--color-pave-white);
+	border: none;
+	font-size: 1em;
+}
+#usersearch::placeholder {
+	color: var(--color-pave-white);
+}
+#usersearch-button {
+	padding: 3px;
+	background-color: transparent;
+	border: none;
+}
+#usersearch-button:hover {
+	cursor: pointer;
+}
+
+#usersearch-icon 
+{
+	font-size: 1.4em;
+	color: var(--color-pave-white);
+}
+
+#options {
+    display: flex;
+    bottom: 0;
+	order: 3;
+	background-color: var(--color-pave-white);
+}
+#options ul {
+    display: flex;
+    list-style: none;
+	flex: 1;
+}
+#options ul li {
+	position: relative;
+    flex-grow: 1;
+}
+#options ul li a {
+    display: block;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    color: var(--color-pave-dark);
+	padding: 15px 0;
+	transition: 0.3s;
+}
+#options ul li:not(:last-child)::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    display: block;
+    right: 0px;
+    top: 15px;
+    bottom: 15px;
+    border-right: 1px solid var(--color-pave-light-2);
+}
+#options ul li a:focus, #options ul li a:hover{
+	background-color: var(--color-pave-dark);
+	color: var(--color-pave-white);
+}
+/* End of app pages configuration */
+/* Begin of feed's header */
+#header-pubs {
+	padding: 15px;
+    border-radius: 5px;
+}
+
+#header-pubs div {
+	display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+#header-pubs #mypic {
+	height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #608D47;
+}
+/* End of feed's header */
+/* Begin of pub template configuration */
+.pub {
+	padding: 10px 0 0 0;
+    background-color: var(--color-pave-white);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.header-pub {
+	display: flex;
+    align-items: flex-start;
+    padding: 0px 15px;
+}
+.header-pub .pub-details {
+	padding: 0 5px;
+	flex: 1
+}
+.header-pub .pub-details .pub-owner-name a {
+	color: #70AD47;
+	font-size: 1em;
+}
+
+.header-pub .pub-details time {
+	font-size: 0.8em;
+}
+.pub-owner-pic {
+    height: 50px;
+}
+.pub-description {
+    font-size: 0.9em;
+    padding: 10px 15px;
+}
+/* End of pub template configuration*/
+/* Begin of feed of pubs */
+#section-pubs {
+	display: flex;
+	margin-top: 25px;
+	background-color: var(--color-pave-default);
+	flex-direction: column;
+}
+#section-pubs .pub {
+	margin-bottom: 15px;
+}
+#section-pubs .pub-images {
+    display: flex;
+    width: 100%;
+}
+/* End of feed of pubs */
+
+
+
+
+#signup-form, #login-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#signup-form .field-container, #login-form .field-container {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+}
+
+p.login-text, p.signup-text {
+	margin-top: 25px;
+	text-align: right;
+	font-size: 0.9em;
+	padding: 10px 0;
+}
+p.login-text a, p.signup-text a {
+	color: #608D47;
+	text-decoration: underline;
+}
+
+#school-data {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#school-data-title {
+    font-size: 0.9em;
+    font-style: italic;
+    text-align: center;
+}
+
+textarea.input-login {
+    resize: none;
+}

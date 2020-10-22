@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<title>PAVE - Entrar</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/general.css"/>
+</head>
+<body>
+		<header id="header-login">
+			<div id="logo-container">
+				<img id="logo" src="./assets/img/logo.png" alt="Logotipo PAVE"/>
+			</div>
+		</header>
+		<main id="main">
+			<div id="login-container">
+				<h1 id="title">Entrar no PAVE</h1>
+				<form id="login-form" method="POST" action="./home.html">
+					<div class="field-container">
+						<label  for="email">E-mail</label>
+						<input class="input-login" type="email" name="email" id="email"/>
+					</div>
+					
+					<div class="field-container">
+						<label for="password">Senha</label>
+						<input class="input-login" type="password" name="password" id="password"/>
+					</div>
+					
+					<div class="field-container">
+						<input class="pave-button-dark" type="submit" name="submit" id="submit" value="Entrar"/>
+					</div>
+				</form>
+				<p class="signup-text">Não possui conta? <a href="./cadastro.html">Cadastrar-se</a></p>
+			</div>
+		</main>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+	<title>PAVE - Cadastrar-se</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./assets/css/general.css"/>
+</head>
+<body>
+    <header id="header-signup">
+        <div id="logo-container">
+            <a href="./index.html">
+                <img id="logo" src="./assets/img/logo.png" alt="Logotipo PAVE"/>
+            </a>
+        </div>
+    </header>
+    <main id="main-signup">
+        <div id="signup-container">
+            <h1 id="title">Criar conta no PAVE</h1>
+            <form id="signup-form" method="POST" action="./index.html">
+            <div class="field-container">
+                <label  for="user-type">Tipo de conta</label>
+                <select class="input-signup" name="user-type" id="user-type" onchange="alterarFormulario()">
+                    <option value="parent">Pai</option>
+                    <option value="student">Aluno</option>
+                    <option value="school">Escola</option>
+                    <option disabled="disabled" selected="selected" value="">Escolha um tipo...</option>
+                </select>
+            </div>
+            
+            <div class="field-container">
+                <label  for="name">Seu nome</label>
+                <input class="input-signup" type="text" name="name" id="name"/>
+            </div>
+            
+            <div class="field-container">
+                <label  for="email">E-mail</label>
+                <input class="input-signup" type="email" name="email" id="email"/>
+            </div>
+
+            <div class="field-container">
+                <label for="password">Senha</label>
+                <input class="input-signup" type="password" name="password" id="password"/>
+            </div>
+                
+            <div id="school-data">
+                <h2 id="school-data-title">Dados da escola</h2>
+
+                <div class="field-container">
+                    <label for="cnpj">CNPJ</label>
+                    <input class="input-signup" type="text" name="cnpj" id="cnpj"/>
+                </div>
+                
+                <div class="field-container">
+                    <label for="nome-representante">Nome do representante</label>
+                    <input class="input-signup" type="text" name="nome-representante" id="nome-representante"/>
+                </div>
+                
+                <div class="field-container">
+                    <label for="cpf">CPF do representante</label>
+                    <input class="input-signup" type="text" name="cpf" id="cpf"/>
+                </div>
+                
+                <div class="field-container">
+                    <label for="cep">CEP da escola</label>
+                    <input class="input-signup" type="text" name="cep" id="cep"/>
+                </div>
+                
+                <div class="field-container">
+                    <label for="logradouro">Logradouro da Escola</label>
+                    <input disabled="disabled" class="input-signup" type="text" name="logradouro" id="logradouro"/>
+                </div>
+
+                <div class="field-container">
+                    <label for="bairro">Bairro da Escola</label>
+                    <input disabled="disabled" class="input-signup" type="text" name="bairro" id="bairro"/>
+                </div>
+                    
+                <div class="field-container">
+                    <label for="cidade">Cidade da Escola</label>
+                    <input disabled="disabled" class="input-signup" type="text" name="cidade" id="cidade"/>
+                </div>
+                
+                <div class="field-container">
+                    <label for="numero">Nº da Escola</label>
+                    <input class="input-signup" type="text" name="numero" id="numero"/>
+                </div>
+                
+                <div class="field-container">
+                    <label for="info-contato">Informações de contato da escola</label>
+                    <textarea class="input-signup" rows="3" name="info-contato" id="info-contato"></textarea>
+                </div>
+                
+                <div class="field-container">
+                    <label for="sobre">Sobre a escola</label>
+                    <textarea class="input-signup" rows="3" name="sobre" id="sobre"></textarea>
+                </div>
+            </div>
+            
+            <div class="field-container">
+                <input class="pave-button-dark" type="submit" name="submit" id="submit" value="Cadastrar-se"/>
+            </div>
+                
+			</form>
+			<p class="login-text">Já é cadastrado? <a href="./index.html">Entre</a></p>
+        </div>
+    </main>
+        
+
+    <script>
+        function load() {
+            document.querySelector('#user-type').value = "";
+        };
+        load(); // Limpar o select ao carregar página
+        function alterarFormulario() {
+            if(event.target.value == 'school') {
+                document.querySelector("#school-data").style.display = "flex"; // Exibe os campos de escola
+            } else {
+                document.querySelector("#school-data").style.display = "none"; // Esconde os campos de escola
+            }
+        }
+    </script>
+</body>
+</html>
